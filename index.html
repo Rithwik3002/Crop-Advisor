@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Field Advisor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="./images/home.png" alt="Home" class="hidden-image">
+        <img src="./images/working.png" alt="Working" class="hidden-image">
+        <img src="./images/crop.png" alt="Crop" class="hidden-image">
+
+        <div id="home-page">
+            <img src="./images/logo.png" alt="Field Advisor Logo" class="logo">
+            <h1>Field Advisor</h1>
+            <p>Welcome to the Field Advisor App</p>
+            <button onclick="goToPage('working-page')">Enter</button>
+        </div>
+
+        <div id="working-page" class="hidden">
+            <nav>
+                <button onclick="goToPage('home-page')">HOME</button>
+                <button onclick="goToPage('image-page')">IMAGE</button>
+                <button>DEVELOPED BY</button>
+            </nav>
+            <form>
+                <label>Nitrogen</label>
+                <input type="text">
+                <label>Phosphorus</label>
+                <input type="text">
+                <label>Potassium</label>
+                <input type="text">
+                <label>Temperature</label>
+                <input type="text">
+                <label>Humidity</label>
+                <input type="text">
+                <label>pH</label>
+                <input type="text">
+                <label>Rainfall</label>
+                <input type="text">
+            </form>
+            <button>Predict Crop</button>
+            <button>Reload</button>
+        </div>
+
+        <div id="image-page" class="hidden">
+            <nav>
+                <button onclick="goToPage('home-page')">HOME</button>
+                <button onclick="goToPage('working-page')">WORKING</button>
+                <button>DEVELOPED BY</button>
+            </nav>
+            <img src="./images/crop.png" alt="Crop Image" class="crop-image">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
